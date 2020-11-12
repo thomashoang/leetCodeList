@@ -24,7 +24,8 @@ router.get("/", async (req, res) => {
     const newProblem = new Problem({
         title: req.body.title,
         description: req.body.description,
-        category: req.body.category
+        category: req.body.category,
+        difficulty: req.body.difficulty
     });
     try {
       const problem = await newProblem.save();

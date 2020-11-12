@@ -14,6 +14,10 @@ const problemSchema = new Schema({
         type: String,
         required: true
     },
+    difficulty: {
+        type: String,
+        required: true
+    },
     date: {
         type: Date,
         default: Date.now()
