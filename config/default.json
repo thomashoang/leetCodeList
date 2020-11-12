@@ -1,0 +1,3 @@
+{
+    "MONGO_URI": "mongodb+srv://thomas123:leetCodeList@cluster0.soc3m.mongodb.net/leetCodeList?retryWrites=true&w=majority"
+}

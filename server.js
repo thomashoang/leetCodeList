@@ -1,12 +1,14 @@
 const express = require('express');
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 const mongoose = require('mongoose');
+const config = require('config');
 
 //bodyParser middleware
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://thomas123:leetCodeList@cluster0.soc3m.mongodb.net/leetCodeList?retryWrites=true&w=majority', {
+const db = config.get("MONGO_URI");
+mongoose.connect(db, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
